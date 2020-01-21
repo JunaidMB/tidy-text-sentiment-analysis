@@ -89,9 +89,11 @@ for (i in unique(philson_sent_labeled$chapter)) {
 }
 
 # Plot comparison cloud
-comparison.cloud(cpt_wc[['chapter 1']], colors = c("gray20", "gray80"),
-                 max.words = 10)
+comparison.cloud(cpt_wc[['chapter 5']], colors = c("red", "green"),
+                 max.words = 50)
 
 # Filter list for sentiment changing chapters
 filter(philston_afinn_lagged, sentiment_change_flag == 1)$chapter
 cpt_wc[str_c("chapter ", filter(philston_afinn_lagged, sentiment_change_flag == 1)$chapter)]
+
+cpt_wc[['chapter 5']]
